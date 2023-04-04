@@ -54,7 +54,25 @@ export class AppComponent {
         
 
       ]
+    },
+     {
+      pageTitle: 'Kontakt',
+      link: 'contact',
+      subPages: [{
+        pageTitle: 'Akcijske cene',
+        link: 'contact'
+      },
+        {
+          pageTitle: 'Sisanje ovaca',
+          link: 'contact'
+        }
+       
+        
+
+      ]
     }
+
+
   ]
 
   pageClick(item: any) { //ove dve funkcije rade istu stvar, moze se sve resiti i sa jednom al neka ostane zbog primera
