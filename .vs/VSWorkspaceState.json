@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\page",
+    "\\src\\app\\page\\about"
   ],
-  "SelectedNode": "\\C:\\Users\\Laptop\\Desktop\\FirstAngularProject\\my-first-project",
+  "SelectedNode": "\\src\\app\\page\\about",
   "PreviewInSolutionExplorer": false
 }
