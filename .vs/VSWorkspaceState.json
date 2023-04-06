@@ -4,8 +4,8 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\page",
-    "\\src\\app\\page\\about"
+    "\\src\\app\\page\\about",
+    "\\src\\assets"
   ],
-  "SelectedNode": "\\src\\app\\page\\about",
   "PreviewInSolutionExplorer": false
 }
