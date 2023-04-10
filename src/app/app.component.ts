@@ -1,6 +1,6 @@
 //import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationStart, Router } from '@angular/router';
 //import { MatMenuModule } from '@angular/material/menu';
 
 
@@ -12,10 +12,18 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'my-first-project';
 
+  url = "";
 
 
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationStart)
+        this.url = event.url;
+      console.log(this.url);
+    })
+
+  }
   public pages2 = [{ //kreirali smo objekat
     pageTitle: 'Pocetna',
     link: 'home',
@@ -85,7 +93,7 @@ export class AppComponent {
     this.router.navigate(["/" + item])
   }
 
-
+ 
 
 
 

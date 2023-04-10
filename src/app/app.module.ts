@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http'; // jasno, import sa http stranice angular common odakle smo uzeli httpclientmodule
+//import { HttpClientModule } from '@angular/common/http'; // jasno, import sa http stranice angular common odakle smo uzeli httpclientmodule
 
 //import { MatMenuModule } from '@angular/material/menu';
 import { AppRoutingModule } from './app-routing.module';
@@ -14,7 +14,7 @@ import { PageModule } from './page/page.module'; //import pagemodule ts koji smo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
+   // HttpClientModule,
     PageModule //ovde je vazno da sve komponente moraju proci kroz ovaj app modul ili ovako indirektno preko pagemodula ili direktno u app modulu
   ],
   providers: [],

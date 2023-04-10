@@ -1,27 +1,67 @@
-<div class="for-Div">
-  <ng-container *ngFor="let page of pages2">
-    <button (click)="pageClick(page.link)" *ngIf="page.subPages.length == 0" mat-button>{{page.pageTitle}}</button>
+<div *ngIf="url != '/login'&& url !='/'">
+  <div>
+    <div fxLayout="row wrap">
+      <div fxFlex="100%" style="background-color: lightyellow; height:60px;">
+        <div style="float:left;">
+          <img src="https://cdn.worldvectorlogo.com/logos/angular-3.svg" style="height: 50px; width:auto;">
+        </div>
+        <div style="float: right;">
+          <ngx-avatar name="Angular Admin"> </ngx-avatar>
+        </div>
+      </div>
+      <div fxFlex="10%" style="background-color: lightgreen; height:600px;">
+        <div class="sidebar">
+          <ul style="list-style-type:none">
+            <li>
+              <a href="/home">Home</a>
+            </li>
+            <li>
+              <a href="/about">About</a>
+            </li>
+            <li>
+              <a href="/price">Price</a>
+            </li>
+            <li>
+              <a href="/login">Sign Out</a>  <!-- ovde se vracamo na login stranu, odnosno odjavljujemo se-->
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div fxFlex="90%" style="height:1000px;">
+        <router-outlet></router-outlet> <!-- ovaj ruter u divu omogucava prikaz ostalih komponenti-->
+      </div>
+    </div>
+  </div>
 
-    <ng-container *ngIf="page.subPages.length > 0">
-      <button mat-button [matMenuTriggerFor]="aboveMenu">{{page.pageTitle}}</button>
-      <mat-menu #aboveMenu="matMenu" yPosition="above">
-        <button (click)="subPagesClick(item.link)" *ngFor="let item of page.subPages" mat-menu-item>{{item.pageTitle}}</button>
-
-      </mat-menu>
-
-
-    </ng-container>
-  </ng-container>
 
 </div>
-  
+
+
+
+<div *ngIf="url == '/login'|| url == '/'"  >
+  <router-outlet></router-outlet>
+
+
+
+</div>
 
 
 
 
 
+<!--
+ <ng-container *ngFor="let page of pages2">
+     <button (click)="pageClick(page.link)" *ngIf="page.subPages.length == 0" mat-button>{{page.pageTitle}}</button>
+
+     <ng-container *ngIf="page.subPages.length > 0">
+       <button mat-button [matMenuTriggerFor]="aboveMenu">{{page.pageTitle}}</button>
+       <mat-menu #aboveMenu="matMenu" yPosition="above">
+         <button (click)="subPagesClick(item.link)" *ngFor="let item of page.subPages" mat-menu-item>{{item.pageTitle}}</button>
+
+       </mat-menu>
 
 
-
-<router-outlet></router-outlet>
+     </ng-container>
+   </ng-container>
+ -->
 <!-- -->
