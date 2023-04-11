@@ -5,6 +5,7 @@ import { ContactComponent } from './page/contact/contact.component';
 import { HomeComponent } from './page/home/home.component';
 import { LoginComponent } from './page/login/login.component';
 import { PriceComponent } from './page/price/price.component';
+import { UsersComponent } from './page/users/users.component';
 
 
 const routes: Routes = [{ path: '', component: LoginComponent },
@@ -12,7 +13,8 @@ const routes: Routes = [{ path: '', component: LoginComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'price', component: PriceComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'users', component: UsersComponent }
 ];
  // ovde se definisu sve rute npr /home, /about itd. u uglastim zagradama otvori se viticasta radi kreiranja novog objekta
 //red 5 - ruta je takva da ako stranica nema sadrzaja uvek otvori homepage odnosno homeComponent
